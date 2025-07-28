@@ -2,6 +2,7 @@
   "name": "automation-task-ui",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test:chromium": "playwright test --project=chromium",
     "test:chromium:headed": "playwright test --project=chromium --headed",
