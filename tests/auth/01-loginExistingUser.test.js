@@ -12,7 +12,6 @@ test('Login existing user', async ({ page }) => {
     const loginSuccessMsg = page.locator('div.ant-message-custom-content.ant-message-success >> text=login success');
     await expect(loginSuccessMsg).toBeVisible({ timeout: 3000 });
 
-    console.log("user logged in successfully");
   } catch (error) {
     console.error('something went wroing', error);
     throw error;
