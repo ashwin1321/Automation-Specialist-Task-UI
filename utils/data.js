@@ -4,7 +4,7 @@ export const newItemData = {
   category: 'Extra',
   date: '2025-07-28',
   reference: 'Lunch',
-  description: 'lunch timsse'
+  description: 'test1'
 };
 
 export const updatedItemData = {
@@ -13,5 +13,5 @@ export const updatedItemData = {
   category: 'Repair',
   date: '2025-07-30',
   reference: 'water',
-  description: 'payment to water bottle'
+  description: 'payment to water'
 };

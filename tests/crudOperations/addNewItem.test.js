@@ -10,8 +10,8 @@ test('Add new item in the app', async ({ page }) => {
         await page.goto('/');
 
         await userLogin(page, credentials.name, credentials.password);
-        await page.waitForTimeout(5000);
-
+        
+        await page.getByRole('button', { name: 'Add New' }).waitFor({ state: 'visible' });
         await page.getByRole('button', { name: 'Add New' }).click();
 
         await createNewItem(
@@ -19,10 +19,10 @@ test('Add new item in the app', async ({ page }) => {
             newItemData.amount,
             newItemData.type,
             newItemData.category,
-            newItemData.date,
             newItemData.reference,
             newItemData.description
         );
+        
         await expect(page.getByText(newItemData.description)).toBeVisible();
 
     } catch (error) {
