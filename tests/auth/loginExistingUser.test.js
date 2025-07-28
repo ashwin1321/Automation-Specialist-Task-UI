@@ -1,18 +1,10 @@
 import { test, expect } from '@playwright/test';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import { userLogin } from '../../utils/authenticateHelpers.js';
+import credentials from '../../utils/credentials.js';
 
 test('Login existing user', async ({ page }) => {
 
   try {
-    const finelname = fileURLToPath(import.meta.url);
-    const foldername = path.dirname(finelname);
-
-    const filePath = path.resolve(foldername, '../../utils/userCredentials.json');
-    const credentials = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-
     await page.goto('/');
 
     await userLogin(page, credentials.name, credentials.password);
