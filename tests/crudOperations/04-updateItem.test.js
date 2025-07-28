@@ -11,7 +11,7 @@ test('Update an item', async ({ page }) => {
 
         await userLogin(page, credentials.name, credentials.password);
         
-          await page.locator('tbody .ant-table-row').first().locator('[role="img"][aria-label="edit"]').waitFor({state: "visible"})
+        await page.locator('tbody .ant-table-row').first().locator('[role="img"][aria-label="edit"]').waitFor({state: "visible"})
         await page.locator('tbody .ant-table-row').first().locator('[role="img"][aria-label="edit"]').click();
 
         await updateItem(

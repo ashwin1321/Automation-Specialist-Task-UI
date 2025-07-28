@@ -18,6 +18,7 @@ test('Add new item in the app', async ({ page }) => {
             page,
             newItemData.amount,
             newItemData.type,
+            newItemData.date,
             newItemData.category,
             newItemData.reference,
             newItemData.description
