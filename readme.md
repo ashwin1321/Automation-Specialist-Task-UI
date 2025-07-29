@@ -28,6 +28,7 @@ npm run test
 - This repo has github action workflow configured
 - On every push workflow runs
 - please view the workflow result [here](https://github.com/ashwin1321/Automation-Specialist-Task-UI/actions/runs/16585418553/job/46909540275)
+- View the test artifacts here: https://github.com/ashwin1321/Automation-Specialist-Task-UI/actions/runs/16585418553/artifacts/3635154021
 
 
 ## Note
