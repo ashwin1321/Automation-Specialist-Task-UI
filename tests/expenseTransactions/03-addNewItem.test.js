@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { userLogin } from '../../utils/authUtils/login.js';
 import credentials from '../../utils/credentials/credentials.js';
 import { createNewItem } from '../../utils/transactions/createItem.js';
-import { newItemData } from '../../utils/data.js';
+import { newItemData } from '../../utils/testData/data.js';
 
 test('Add new item in the app', async ({ page }) => {
 
