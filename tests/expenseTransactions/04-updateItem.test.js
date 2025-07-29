@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { userLogin } from '../../utils/authenticateHelpers.js';
+import { userLogin } from '../../utils/authUtils/login.js';
 import credentials from '../../utils/credentials.js';
-import { updateItem } from '../../utils/allTransactionsHelper.js';
+import { updateItem } from '../../utils/transactions/updateItem.js';
 import { updatedItemData } from '../../utils/data.js';
 
 test('Update an item', async ({ page }) => {

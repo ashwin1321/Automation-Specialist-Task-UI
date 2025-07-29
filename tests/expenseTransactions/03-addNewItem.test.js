@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { userLogin } from '../../utils/authenticateHelpers.js';
+import { userLogin } from '../../utils/authUtils/login.js';
 import credentials from '../../utils/credentials.js';
-import { createNewItem } from '../../utils/allTransactionsHelper.js';
+import { createNewItem } from '../../utils/transactions/createItem.js';
 import { newItemData } from '../../utils/data.js';
 
 test('Add new item in the app', async ({ page }) => {
@@ -10,9 +10,11 @@ test('Add new item in the app', async ({ page }) => {
         await page.goto('/');
 
         await userLogin(page, credentials.name, credentials.password);
-        
+
         await page.getByRole('button', { name: 'Add New' }).waitFor({ state: 'visible' });
         await page.getByRole('button', { name: 'Add New' }).click();
+
+        const testDescription = `${newItemData.description}-${Math.floor(Math.random() * 10000)}`;
 
         await createNewItem(
             page,
@@ -21,10 +23,10 @@ test('Add new item in the app', async ({ page }) => {
             newItemData.date,
             newItemData.category,
             newItemData.reference,
-            newItemData.description
+            testDescription
         );
-        
-        await expect(page.getByText(newItemData.description)).toBeVisible();
+
+        await expect(page.getByText(testDescription)).toBeVisible();
 
     } catch (error) {
         console.error('something went wroing', error);
