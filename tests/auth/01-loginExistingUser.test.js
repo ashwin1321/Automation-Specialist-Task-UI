@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { userLogin } from '../../utils/authUtils/login.js';
-import credentials from '../../utils/credentials.js';
+import credentials from '../../utils/credentials/credentials.js';
 
 test('Login existing user', async ({ page }) => {
 

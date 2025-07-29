@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { userLogin } from '../../utils/authUtils/login.js';
-import credentials from '../../utils/credentials.js';
+import credentials from '../../utils/credentials/credentials.js';
 import { deleteItenm } from '../../utils/transactions/deleteItem.js';
 
 test('delete an item', async ({ page }) => {

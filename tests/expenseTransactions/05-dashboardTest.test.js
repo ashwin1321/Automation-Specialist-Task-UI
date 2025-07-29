@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { userLogin } from '../../utils/authUtils/login.js';
-import credentials from '../../utils/credentials.js';
+import credentials from '../../utils/credentials/credentials.js';
 import { filterItem } from '../../utils/transactions/filterItem.js';
 
 test('Check if the item is present in dashboard or not -Get request validation', async ({ page }) => {
